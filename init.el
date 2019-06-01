@@ -23,6 +23,10 @@
 
 (use-package better-defaults)
 
+(use-package rainbow-delimiters
+  :hook
+  (prog-mode . rainbow-delimiters-mode))
+
 ;; TODO: Look up more into the doom theme configuration
 (use-package doom-themes
   :init
