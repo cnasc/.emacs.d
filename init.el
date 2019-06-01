@@ -23,8 +23,7 @@
 
 (use-package better-defaults)
 
-(use-package tao-theme
+;; TODO: Look up more into the doom theme configuration
+(use-package doom-themes
   :init
-  (load-theme 'tao-yang t))
-
-
+  (load-theme 'doom-solarized-light t))
