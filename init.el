@@ -1,3 +1,4 @@
+(setq inhibit-startup-screen t)
 (let ((settings '((font . "Fantasque Sans Mono-13")
                   (height . 45)
                   (width . 120))))
@@ -31,3 +32,9 @@
 (use-package doom-themes
   :init
   (load-theme 'doom-solarized-light t))
+
+(use-package scad-mode)
+
+(use-package magit
+  :bind
+  (("C-x g" . magit-status)))
