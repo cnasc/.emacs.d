@@ -1,3 +1,5 @@
+(set-face-attribute 'default t :font "Fantasque Sans Mono 14")
+
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
@@ -21,3 +23,6 @@
 (use-package tao-theme
   :init
   (load-theme 'tao-yang t))
+
+
+
