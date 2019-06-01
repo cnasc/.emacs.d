@@ -1,4 +1,7 @@
-(set-face-attribute 'default t :font "Fantasque Sans Mono 14")
+(let ((settings '((font . "Fantasque Sans Mono-13")
+                  (height . 45)
+                  (width . 120))))
+  (setq default-frame-alist (nconc settings default-frame-alist)))
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -23,6 +26,5 @@
 (use-package tao-theme
   :init
   (load-theme 'tao-yang t))
-
 
 
