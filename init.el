@@ -15,3 +15,9 @@
 ;; Everything else will go through use-package
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
+
+(use-package better-defaults)
+
+(use-package tao-theme
+  :init
+  (load-theme 'tao-yang t))
