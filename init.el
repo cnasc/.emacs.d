@@ -52,3 +52,9 @@
   (setq company-dabbrev-downcase 0)
   :hook
   (after-init . global-company-mode))
+
+(use-package crux
+  :bind
+  (("C-a" . crux-move-beginning-of-line)
+   ("C-k" . crux-smart-kill-line)
+   ("M-o" . crux-smart-open-line)))
