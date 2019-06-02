@@ -33,8 +33,22 @@
   :init
   (load-theme 'doom-solarized-light t))
 
-(use-package scad-mode)
-
 (use-package magit
   :bind
   (("C-x g" . magit-status)))
+
+(use-package paredit
+  :hook
+  ((emacs-lisp-mode) . paredit-mode))
+
+(use-package geiser
+  :config
+  (setq geiser-active-implementations '(guile)))
+
+(use-package company
+  :config
+  (setq company-idle-delay 0.2)
+  (setq company-show-numbers t)
+  (setq company-dabbrev-downcase 0)
+  :hook
+  (after-init . global-company-mode))
