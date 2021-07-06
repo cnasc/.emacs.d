@@ -14,4 +14,4 @@ This is my personal emacs config. My main goals were to keep startup time down, 
 - `straight-setup.el`
   - the scaffolding code that sets up `straight.el`, it's a bit ugly so I moved it to its own file.
 - `defaults.el`
-  - changing built-in emacs settings (menu bar, scroll bar, etc.)
+  - changing built-in emacs settings (font, menu bar, scroll bar, etc.)
