@@ -1,8 +1,21 @@
+;;; init.el --- My startup file                      -*- lexical-binding: t; -*-
+
+;; keep customize settings from polluting main init file
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+
 (setq inhibit-startup-screen t)
 (let ((settings '((font . "Fantasque Sans Mono-13")
                   (height . 45)
                   (width . 120))))
   (setq default-frame-alist (nconc settings default-frame-alist)))
+
+(global-hl-line-mode t)
+(global-display-line-numbers-mode t)
+(show-paren-mode t)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; TODO: workaround for failure in setting up straight.el. See
 ;; https://github.com/raxod502/straight.el/issues/757
@@ -31,6 +44,10 @@
 
 (use-package modus-themes
   :init
+  (setq	modus-themes-mode-line '(accented)
+	modus-themes-completions 'opinionated
+	modus-themes-subtle-line-numbers t
+	modus-themes-paren-match 'subtle-bold)
   (modus-themes-load-themes)
   :config
   (modus-themes-load-operandi)
@@ -58,3 +75,6 @@
    ("C-k" . crux-smart-kill-line)
    ("M-o" . crux-smart-open-line)
    ("C-c I" . crux-find-user-init-file)))
+
+(provide 'init)
+;;; init.el ends here
