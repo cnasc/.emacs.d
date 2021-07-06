@@ -54,4 +54,5 @@
   :bind
   (("C-a" . crux-move-beginning-of-line)
    ("C-k" . crux-smart-kill-line)
-   ("M-o" . crux-smart-open-line)))
+   ("M-o" . crux-smart-open-line)
+   ("C-c I" . crux-find-user-init-file)))
