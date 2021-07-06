@@ -46,5 +46,7 @@
    ("M-o" . crux-smart-open-line)
    ("C-c I" . crux-find-user-init-file)))
 
+(use-package markdown-mode)
+
 (provide 'init)
 ;;; init.el ends here
