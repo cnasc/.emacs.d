@@ -4,6 +4,9 @@
                   (width . 120))))
   (setq default-frame-alist (nconc settings default-frame-alist)))
 
+;; TODO: workaround for failure in setting up straight.el. See
+;; https://github.com/raxod502/straight.el/issues/757
+(setq native-comp-deferred-compilation-deny-list nil)
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
