@@ -25,8 +25,6 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
-(use-package better-defaults)
-
 (use-package rainbow-delimiters
   :hook
   (prog-mode . rainbow-delimiters-mode))
@@ -43,10 +41,6 @@
 (use-package paredit
   :hook
   ((emacs-lisp-mode) . paredit-mode))
-
-(use-package geiser
-  :config
-  (setq geiser-active-implementations '(guile)))
 
 (use-package company
   :config
