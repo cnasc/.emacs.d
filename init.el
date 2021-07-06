@@ -29,10 +29,12 @@
   :hook
   (prog-mode . rainbow-delimiters-mode))
 
-;; TODO: Look up more into the doom theme configuration
-(use-package doom-themes
+(use-package modus-themes
   :init
-  (load-theme 'doom-solarized-light t))
+  (modus-themes-load-themes)
+  :config
+  (modus-themes-load-operandi)
+  :bind ("<f5>" . modus-themes-toggle))
 
 (use-package magit
   :bind
