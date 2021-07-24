@@ -29,7 +29,7 @@
 
 (use-package paredit
   :hook
-  ((emacs-lisp-mode) . paredit-mode))
+  ((emacs-lisp-mode lisp-mode) . paredit-mode))
 
 (use-package company
   :config
@@ -47,6 +47,11 @@
    ("C-c I" . crux-find-user-init-file)))
 
 (use-package markdown-mode)
+
+(use-package sly
+  :config (setq inferior-lisp-program "sbcl"))
+(use-package sly-asdf)
+(use-package sly-quicklisp)
 
 (provide 'init)
 ;;; init.el ends here
