@@ -53,5 +53,9 @@
 (use-package sly-asdf)
 (use-package sly-quicklisp)
 
+(use-package anaconda-mode)
+
+(use-package racket-mode)
+
 (provide 'init)
 ;;; init.el ends here
